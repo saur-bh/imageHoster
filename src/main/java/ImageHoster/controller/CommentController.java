@@ -49,8 +49,7 @@ public class CommentController {
         comment.setCreatedDate(new Date());
         commentService.createComment(comment);
 
-        // Boolean isLoggedUSer = userSameAsLoggedInUser(image.getUser(), session);
-        model.addAttribute("image", image);
+       model.addAttribute("image", image);
         model.addAttribute("tags", tags);
 
         return "redirect:/images/" + image.getId() + "/" + image.getTitle();
